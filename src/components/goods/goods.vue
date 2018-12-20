@@ -39,10 +39,10 @@
           </li>
         </ul>
       </div>
-      <shopcart ref="shopcart" :selectFoods="selectFoods"  :deliveryPrice="seller.deliveryPrice"
+      <shopcart ref="shopcart" :selectFoods="selectFoods" :deliveryPrice="seller.deliveryPrice"
                 :minPrice="seller.minPrice" :seller="seller"></shopcart>
     </div>
-    <food @add="addFood" :food="selectedFood"  ref="food"></food>
+    <food @add="addFood" :food="selectedFood" ref="food"></food>
   </div>
 </template>
 
@@ -51,6 +51,7 @@
   import shopcart from 'components/shopcart/shopcart';
   import cartcontrol from 'components/cartcontrol/cartcontrol';
   import food from 'components/food/food';
+
   var config = require('config')
   config = process.env.NODE_ENV === 'development' ? config.dev : config.build
   const ERR_OK = 0;
@@ -94,17 +95,17 @@
       }
     },
     created() {
-        //如果url里有openid, 设置进cookie
-        var openid = this.$route.query.openid;
-        if(typeof openid !== 'undefined') {
-	    var exp = new Date();
-            exp.setTime(exp.getTime() + 3600 * 1000);//过期时间60分钟
-            document.cookie = 'openid=' + openid + ";expires=" + exp.toGMTString();
-        }
-        //获取openid
-        if(getCookie('openid') == null) {
-             location.href = config.openidUrl + '?returnUrl=' +  encodeURIComponent(config.sellUrl + '/#/');
-        }
+      //如果url里有openid, 设置进cookie
+      var openid = this.$route.query.openid;
+      if (typeof openid !== 'undefined') {
+        var exp = new Date();
+        exp.setTime(exp.getTime() + 3600 * 1000);//过期时间60分钟
+        document.cookie = 'openid=' + openid + ";expires=" + exp.toGMTString();
+      }
+      //获取openid
+      if (getCookie('openid') == null) {
+        location.href = config.openidUrl + '?returnUrl=' + encodeURIComponent(config.sellUrl + '/#/');
+      }
       this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
       let selectedGoods = window.selectedGoods;
       selectedGoods = selectedGoods ? JSON.parse(selectedGoods) : [];
@@ -191,12 +192,12 @@
   };
 
   function getCookie(name) {
-      var arr;
-      var reg = new RegExp('(^| )' +name+"=([^;]*)(;|$)");
-      if(arr=document.cookie.match(reg))
-          return unescape(arr[2]);
-      else
-          return null;
+    var arr;
+    var reg = new RegExp('(^| )' + name + "=([^;]*)(;|$)");
+    if (arr = document.cookie.match(reg))
+      return unescape(arr[2]);
+    else
+      return null;
   }
 </script>
 
@@ -210,24 +211,29 @@
     bottom: 46px
     width: 100%
     overflow: hidden
+
     .menu-wrapper
       flex: 0 0 80px
       width: 80px
       background: #f3f5f7
+
       .menu-item
         display: table
         height: 54px
         width: 56px
         padding: 0 12px
         line-height: 14px
+
         &.current
           position: relative
           z-index: 10
           margin-top: -1px
           background: #fff
           font-weight: 700
+
           .text
             border-none()
+
         .icon
           display: inline-block
           vertical-align: top
@@ -236,24 +242,32 @@
           margin-right: 2px
           background-size: 12px 12px
           background-repeat: no-repeat
+
           &.decrease
             bg-image('decrease_3')
+
           &.discount
             bg-image('discount_3')
+
           &.guarantee
             bg-image('guarantee_3')
+
           &.invoice
             bg-image('invoice_3')
+
           &.special
             bg-image('special_3')
+
         .text
           display: table-cell
           width: 56px
           vertical-align: middle
           border-1px(rgba(7, 17, 27, 0.1))
           font-size: 12px
+
     .foods-wrapper
       flex: 1
+
       .title
         padding-left: 14px
         height: 26px
@@ -262,46 +276,58 @@
         font-size: 12px
         color: rgb(147, 153, 159)
         background: #f3f5f7
+
       .food-item
         display: flex
         margin: 18px
         padding-bottom: 18px
         border-1px(rgba(7, 17, 27, 0.1))
+
         &:last-child
           border-none()
           margin-bottom: 0
+
         .icon
           flex: 0 0 57px
           margin-right: 10px
+
         .content
           flex: 1
+
           .name
             margin: 2px 0 8px 0
             height: 14px
             line-height: 14px
             font-size: 14px
             color: rgb(7, 17, 27)
+
           .desc, .extra
             line-height: 10px
             font-size: 10px
             color: rgb(147, 153, 159)
+
           .desc
             line-height: 12px
             margin-bottom: 8px
+
           .extra
             .count
               margin-right: 12px
+
           .price
             font-weight: 700
             line-height: 24px
+
             .now
               margin-right: 8px
               font-size: 14px
               color: rgb(240, 20, 20)
+
             .old
               text-decoration: line-through
               font-size: 10px
               color: rgb(147, 153, 159)
+
           .cartcontrol-wrapper
             position: absolute
             right: 0

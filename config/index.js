@@ -16,9 +16,9 @@ module.exports = {
 		productionGzip: false,
 		productionGzipExtensions: ['js', 'css'],
 		port: 9000,
-    sellUrl: 'http://127.0.0.1',
-    openidUrl: 'http://sell.springboot.cn/sell/wechat/authorize',
-    wechatPayUrl: 'http://127.0.0.1'
+		sellUrl: 'http://sell.com',
+		openidUrl: 'http://potato369.mynatapp.cc/sell/wechat/authorize',
+		wechatPayUrl: 'http://potato369.mynatapp.cc/sell/pay/create'
 	},
 	dev: {
 		env: require('./dev.env'),
@@ -32,8 +32,8 @@ module.exports = {
 		// In our experience, they generally work as expected,
 		// just be aware of this issue when enabling this option.
 		cssSourceMap: false,
-		sellUrl: 'http://127.0.0.1',
-		openidUrl: 'http://127.0.0.1',
-		wechatPayUrl: 'http://127.0.0.1'
+    sellUrl: 'http://192.168.1.138:8080',
+    openidUrl: 'http://potato369.mynatapp.cc/sell/wechat/authorize',
+    wechatPayUrl: 'http://potato369.mynatapp.cc/sell/pay/create'
 	}
 }

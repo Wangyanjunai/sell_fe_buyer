@@ -25,15 +25,3 @@ Vue.js 高仿饿了么外卖 App 课程源码，课程地址： http://coding.im
 
 master 代码已经升级到最新 Vue.js 2.1.10 版本，如果想查看 1.0 版本的代码可以切换到 1.0 的代码分支。
 
-编译代码运行：
-未编译的前端代码
-
-运行方式
-
-需安装node和npm 
-进入文件夹目录
-1  npm install 
-2  npm run dev
-
-浏览器打开  localhost  
-
