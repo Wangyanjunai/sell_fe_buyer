@@ -15,14 +15,14 @@ module.exports = {
 		// npm install --save-dev compression-webpack-plugin
 		productionGzip: false,
 		productionGzipExtensions: ['js', 'css'],
-		port: 9000,
+		port: 8088,
 		sellUrl: 'http://sell.com',
 		openidUrl: 'http://www.potato369.com:8090/sell/wechat/authorize',
 		wechatPayUrl: 'http://www.potato369.com:8090/sell/pay/create'
 	},
 	dev: {
 		env: require('./dev.env'),
-		port: 8088,
+		port: 8099,
 		assetsSubDirectory: 'static',
 		assetsPublicPath: '/',
 		proxyTable: {},
@@ -32,7 +32,7 @@ module.exports = {
 		// In our experience, they generally work as expected,
 		// just be aware of this issue when enabling this option.
 		cssSourceMap: false,
-    sellUrl: 'http://192.168.1.138:8080',
+    sellUrl: 'http://sell.com',
     openidUrl: 'http://potato369.mynatapp.cc/sell/wechat/authorize',
     wechatPayUrl: 'http://potato369.mynatapp.cc/sell/pay/create'
 	}
