@@ -32,7 +32,7 @@ module.exports = {
 		// In our experience, they generally work as expected,
 		// just be aware of this issue when enabling this option.
 		cssSourceMap: false,
-    sellUrl: 'http://www.potato369.com:8088',
+    sellUrl: 'http://www.potato369.com:8099',
     openidUrl: 'http://www.potato369.com:8090/sell/wechat/authorize',
     wechatPayUrl: 'http://www.potato369.com:8090/sell/pay/create'
 	}
