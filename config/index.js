@@ -16,7 +16,7 @@ module.exports = {
 		productionGzip: false,
 		productionGzipExtensions: ['js', 'css'],
 		port: 8088,
-		sellUrl: 'http://sell.com',
+		sellUrl: 'http://www.potato369.com:8088',
 		openidUrl: 'http://www.potato369.com:8090/sell/wechat/authorize',
 		wechatPayUrl: 'http://www.potato369.com:8090/sell/pay/create'
 	},
@@ -32,8 +32,8 @@ module.exports = {
 		// In our experience, they generally work as expected,
 		// just be aware of this issue when enabling this option.
 		cssSourceMap: false,
-    sellUrl: 'http://sell.com',
-    openidUrl: 'http://potato369.mynatapp.cc/sell/wechat/authorize',
-    wechatPayUrl: 'http://potato369.mynatapp.cc/sell/pay/create'
+    sellUrl: 'http://www.potato369.com:8099',
+    openidUrl: 'http://www.potato369.com:8090/sell/wechat/authorize',
+    wechatPayUrl: 'http://www.potato369.com:8090/sell/pay/create'
 	}
 }
