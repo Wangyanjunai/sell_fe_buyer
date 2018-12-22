@@ -16,9 +16,9 @@ module.exports = {
 		productionGzip: false,
 		productionGzipExtensions: ['js', 'css'],
 		port: 8088,
-		sellUrl: 'http://www.potato369.com:8088/sell',
-		openidUrl: 'http://www.potato369.com:8090/sell/wechat/authorize',
-		wechatPayUrl: 'http://www.potato369.com:8090/sell/pay/create'
+		sellUrl: 'https://www.potato369.com/sell',
+		openidUrl: 'https://www.potato369.com/sell/wechat/authorize',
+		wechatPayUrl: 'https://www.potato369.com/sell/pay/create'
 	},
 	dev: {
 		env: require('./dev.env'),
