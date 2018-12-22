@@ -16,12 +16,12 @@ module.exports = {
 		productionGzip: false,
 		productionGzipExtensions: ['js', 'css'],
 		port: 8088,
-		// sellUrl: 'https://www.potato369.com/sell',
-		// openidUrl: 'https://www.potato369.com/sell/wechat/authorize',
-		// wechatPayUrl: 'https://www.potato369.com/sell/pay/create'
-    sellUrl: 'http://sell.com',
-    openidUrl: 'https://potato369.mynatapp.cc/sell/wechat/authorize',
-    wechatPayUrl: 'https://potato369.mynatapp.cc/sell/pay/create'
+		sellUrl: 'http://www.potato369.com:8088/sell',
+		openidUrl: 'https://www.potato369.com/sell/wechat/authorize',
+		wechatPayUrl: 'https://www.potato369.com/sell/pay/create'
+    // sellUrl: 'http://sell.com',
+    // openidUrl: 'https://potato369.mynatapp.cc/sell/wechat/authorize',
+    // wechatPayUrl: 'https://potato369.mynatapp.cc/sell/pay/create'
 	},
 	dev: {
 		env: require('./dev.env'),
