@@ -28,3 +28,4 @@ master 代码已经升级到最新 Vue.js 2.1.10 版本，如果想查看 1.0 �
 2018-12-22T07:55:12.194071Z 1 [Note] A temporary password is generated for root@localhost: 6Tsj9f!d=wwJ
 
 If you lose this password, please consult the section How to Reset the Root Password in the MySQL reference manual.
+有兴趣的童鞋可以共同参与开发，可以添加我的微信号：wx406151651，QQ：406151651共同参与开发讨论。谢谢合作！！！
